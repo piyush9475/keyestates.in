@@ -5,30 +5,32 @@
   font-family: Arial;
 }
 
+/* NAVBAR */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
-  background: #111;
-  color: white;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
 }
 
 .logo img {
   width: 40px;
-  height: 40px;
   margin-right: 10px;
 }
 
 .logo span {
   color: #00bcd4;
+  font-weight: bold;
 }
 
 nav a {
@@ -37,52 +39,64 @@ nav a {
   color: white;
 }
 
+/* HERO */
 .hero {
-  height: 90vh;
-  background: url('logo.png') center/cover;
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('images/hero.jpg') center/cover no-repeat;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
+  color: white;
+  padding-top: 70px;
+}
+
+.hero h1 {
+  font-size: 40px;
 }
 
 .hero button {
+  margin-top: 20px;
   padding: 12px 25px;
-  margin-top: 15px;
   border: none;
   background: #00bcd4;
   color: white;
   cursor: pointer;
 }
 
+/* PROPERTIES */
 .properties {
-  padding: 50px;
+  padding: 80px 40px;
   text-align: center;
 }
 
 .card-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  justify-content: center;
 }
 
 .card {
-  width: 300px;
   background: #f5f5f5;
-  padding: 15px;
   border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
 .card img {
   width: 100%;
-  border-radius: 10px;
 }
 
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* SERVICES */
 .services {
   background: #eee;
-  padding: 50px;
+  padding: 60px;
   text-align: center;
 }
 
@@ -92,13 +106,15 @@ nav a {
   margin-top: 20px;
 }
 
+/* TESTIMONIAL */
 .testimonial {
-  padding: 50px;
+  padding: 60px;
   text-align: center;
 }
 
+/* CONTACT */
 .contact {
-  padding: 50px;
+  padding: 60px;
   text-align: center;
 }
 
@@ -114,44 +130,57 @@ nav a {
   padding: 10px;
 }
 
+/* FOOTER */
 footer {
   background: #111;
   color: white;
   text-align: center;
   padding: 15px;
 }
-/* ================= RESPONSIVE ================= */
 
-/* Tablet (768px and below) */
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* MOBILE */
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 28px;
+}
+
 @media (max-width: 768px) {
 
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    text-align: center;
+  .menu-toggle {
+    display: block;
   }
 
   nav {
-    margin-top: 10px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #111;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
   }
 
   nav a {
-    display: inline-block;
-    margin: 8px;
-  }
-
-  .hero {
-    height: auto;
-    padding: 60px 20px;
+    padding: 15px;
+    display: block;
   }
 
   .card-container {
-    flex-wrap: wrap;
-  }
-
-  .card {
-    width: 45%;
+    grid-template-columns: 1fr;
   }
 
   .service-box {
@@ -159,76 +188,7 @@ footer {
     gap: 20px;
   }
 
-  .contact form {
-    width: 100%;
-  }
-
-  .properties,
-  .services,
-  .testimonial,
-  .contact {
-    padding: 30px 20px;
-  }
-}
-
-
-/* Mobile (480px and below) */
-@media (max-width: 480px) {
-
-  header {
-    padding: 15px 20px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .logo img {
-    width: 30px;
-    height: 30px;
-  }
-
-  nav a {
-    display: block;
-    margin: 5px 0;
-  }
-
-  .hero {
-    padding: 50px 15px;
-  }
-
   .hero h1 {
-    font-size: 22px;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
-
-  .card-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .service-box {
-    flex-direction: column;
-  }
-
-  .contact form {
-    width: 100%;
-  }
-
-  .contact input,
-  .contact textarea {
-    width: 100%;
-  }
-
-  footer {
-    font-size: 14px;
-    padding: 10px;
+    font-size: 24px;
   }
 }
