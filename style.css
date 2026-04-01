@@ -232,3 +232,131 @@ footer {
     padding: 10px;
   }
 }
+/* ================= EXTRA RESPONSIVE (FULL OPTIMIZATION) ================= */
+
+/* Large Tablets / Small Laptops */
+@media (max-width: 1024px) {
+
+  header {
+    padding: 20px;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 48%;
+  }
+
+  .service-box {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .service-box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+
+  header {
+    padding: 15px;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .properties h2,
+  .services h2,
+  .testimonial h2,
+  .contact h2 {
+    font-size: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .service-box div {
+    width: 100%;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+
+/* Extra Small Devices (Very small phones) */
+@media (max-width: 320px) {
+
+  .hero h1 {
+    font-size: 18px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+}
