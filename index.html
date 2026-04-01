@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KeyEstates - Find Your Dream Property</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,22 +11,27 @@
 <!-- NAVBAR -->
 <header>
   <div class="logo">
-  <img src="logo2.jpeg" alt="KeyEstates Logo">
-  <span>KEYESTATES</span>
-</div>
-  <nav>
+    <img src="logo2.jpeg" alt="Logo">
+    <span>KEYESTATES</span>
+  </div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="navMenu">
     <a href="#">Home</a>
-    <a href="#">Properties</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+    <a href="#properties">Properties</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Find Your Dream Property</h1>
-  <p>Trusted Real Estate Partner in Kolkata</p>
-  <button onclick="scrollToSection('properties')">Explore Now</button>
+  <div class="hero-content">
+    <h1>Find Your Dream Property</h1>
+    <p>Trusted Real Estate Partner in Kolkata</p>
+    <button onclick="scrollToSection('properties')">Explore Now</button>
+  </div>
 </section>
 
 <!-- PROPERTIES -->
@@ -34,19 +40,19 @@
 
   <div class="card-container">
     <div class="card">
-      <img src="logo.png">
+      <img src="images/p1.jpg">
       <h3>3 BHK Apartment</h3>
       <p>₹1.2 Cr - New Town</p>
     </div>
 
     <div class="card">
-      <img src="logo.png">
+      <img src="images/p2.jpg">
       <h3>Luxury Villa</h3>
       <p>₹3.5 Cr - EM Bypass</p>
     </div>
 
     <div class="card">
-      <img src="logo.png">
+      <img src="images/p3.jpg">
       <h3>2 BHK Flat</h3>
       <p>₹75 L - Rajarhat</p>
     </div>
@@ -54,7 +60,7 @@
 </section>
 
 <!-- SERVICES -->
-<section class="services">
+<section id="services" class="services">
   <h2>Our Services</h2>
   <div class="service-box">
     <div>🏠 Property Consulting</div>
@@ -70,7 +76,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
+<section id="contact" class="contact">
   <h2>Contact Us</h2>
   <form>
     <input type="text" placeholder="Your Name" required>
@@ -84,6 +90,9 @@
 <footer>
   <p>© 2026 KeyEstates.in | All Rights Reserved</p>
 </footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 <script src="script.js"></script>
 </body>
