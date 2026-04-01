@@ -1,22 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Key Estates</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>KeyEstates - Find Your Dream Property</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body style="font-family:sans-serif;text-align:center;padding:40px;">
+<!-- NAVBAR -->
+<header>
+  <div class="logo">KEY<span>ESTATES</span></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Properties</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
-<h1>Luxury Living Near Eco Park</h1>
-<p>Premium 2/3/4 BHK Residences</p>
+<!-- HERO -->
+<section class="hero">
+  <h1>Find Your Dream Property</h1>
+  <p>Trusted Real Estate Partner in Kolkata</p>
+  <button onclick="scrollToSection('properties')">Explore Now</button>
+</section>
 
-<a href="https://wa.me/919875329416">
-<button style="padding:15px 25px;font-size:18px;background:black;color:white;border:none;">
-Enquire on WhatsApp
-</button>
-</a>
+<!-- PROPERTIES -->
+<section id="properties" class="properties">
+  <h2>Featured Properties</h2>
 
-<p>Siddharth Gupta | Key Estates</p>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+      <h3>3 BHK Apartment</h3>
+      <p>₹1.2 Cr - New Town</p>
+    </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
+      <h3>Luxury Villa</h3>
+      <p>₹3.5 Cr - EM Bypass</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb">
+      <h3>2 BHK Flat</h3>
+      <p>₹75 L - Rajarhat</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <h2>Our Services</h2>
+  <div class="service-box">
+    <div>🏠 Property Consulting</div>
+    <div>💰 Home Loans</div>
+    <div>📑 Legal Support</div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+  <h2>What Clients Say</h2>
+  <p>"KeyEstates made buying my first home super easy!"</p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 KeyEstates.in | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
