@@ -369,6 +369,7 @@
 
 .trending h2 {
   font-size: 28px;
+  color: #111;
 }
 
 .sub-text {
@@ -376,14 +377,12 @@
   margin-bottom: 20px;
 }
 
-/* GRID */
 .trend-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-/* CARD */
 .trend-card {
   display: flex;
   background: #fff;
@@ -406,10 +405,10 @@
 }
 
 .trend-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 768px) {
   .trend-container {
     grid-template-columns: 1fr;
