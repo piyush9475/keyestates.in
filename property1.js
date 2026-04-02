@@ -162,8 +162,23 @@ class KeyEstates {
       </div>
     `;
   });
+
   
   // 🎯 START APP
   document.addEventListener('DOMContentLoaded', () => {
     new KeyEstates();
   });
+function sendToWhatsApp() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+
+  let whatsappNumber = "919875329416"; // 🔥 Replace with your number
+
+  let url = "https://wa.me/" + whatsappNumber + "?text="
+    + "Name: " + name + "%0a"
+    + "Phone: " + phone + "%0a"
+    + "Message: " + message;
+
+  window.open(url, "_blank");
+}
