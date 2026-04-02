@@ -198,7 +198,7 @@ function sendToWhatsApp() {
     return;
   }
 
-  let whatsappNumber = "919876543210"; // replace with your number
+  let whatsappNumber = "919875329416"; // replace with your number
 
   let url = "https://wa.me/" + whatsappNumber + "?text="
     + "Name: " + name + "%0a"
