@@ -431,11 +431,6 @@
   .notification.success {
     background: var(--accent);
   }
-form input, form textarea {
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
 
 button {
   background: green;
