@@ -182,3 +182,28 @@ function sendToWhatsApp() {
 
   window.open(url, "_blank");
 }
+function sendToWhatsApp() {
+  let name = document.getElementById("name").value.trim();
+  let phone = document.getElementById("phone").value.trim();
+  let message = document.getElementById("message").value.trim();
+
+  // Extra validation
+  if (name === "" || phone === "") {
+    alert("Name and Phone are required!");
+    return;
+  }
+
+  if (phone.length !== 10 || isNaN(phone)) {
+    alert("Enter a valid 10-digit phone number");
+    return;
+  }
+
+  let whatsappNumber = "919876543210"; // replace with your number
+
+  let url = "https://wa.me/" + whatsappNumber + "?text="
+    + "Name: " + name + "%0a"
+    + "Phone: " + phone + "%0a"
+    + "Message: " + message;
+
+  window.open(url, "_blank");
+}
