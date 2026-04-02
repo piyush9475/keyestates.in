@@ -1,3 +1,4 @@
+
 /* 🌟 KEYESTATES - LUXURY WHITE THEME */
 * {
     margin: 0;
@@ -382,7 +383,7 @@
     }
   }
   
-  /* ✨ ANIMATIONS */
+  /*  ANIMATIONS */
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -431,3 +432,53 @@
   .notification.success {
     background: var(--accent);
   }
+
+button {
+  background: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.visit-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.visit-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#contactForm textarea {
+  height: 100px;
+  resize: none;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #333;
+}
