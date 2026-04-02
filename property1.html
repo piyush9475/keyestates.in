@@ -38,7 +38,7 @@
   <div class="property-grid" id="propertyGrid"></div>
 </section>
 
-<section id="contact" class="contact">
+<form onsubmit="sendToWhatsApp(); return false;">
   <h2>Book a Visit</h2>
   <form id="contactForm">
     <input type="text" name="name" placeholder="Full Name" required>
@@ -46,14 +46,6 @@
     <textarea name="message" placeholder="Message"></textarea>
     <button type="submit" class="btn">Submit</button>
   </form>
-  <h3>Contact for this Property</h3>
-
-<form onsubmit="sendToWhatsApp(); return false;">
-  <input type="text" id="name" placeholder="Your Name" required><br><br>
-  <input type="text" id="phone" placeholder="Your Phone" required><br><br>
-  <textarea id="message" placeholder="Your Message"></textarea><br><br>
-  <button type="submit">Send on WhatsApp</button>
-</form>
 </section>
 
 <footer class="footer">
