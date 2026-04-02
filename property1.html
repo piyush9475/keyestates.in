@@ -27,8 +27,8 @@
 
 <section id="home" class="hero">
   <div>
-    <h1>Find Your Dream Home</h1>
-    <p>Premium Properties in Kolkata</p>
+    <img src="dtc-downtown-banner.webp" alt="">
+    <h1>Premium Properties in Kolkata</h1>
     <a href="#properties" class="btn">Explore Properties</a>
   </div>
 </section>
@@ -38,12 +38,16 @@
   <div class="property-grid" id="propertyGrid"></div>
 </section>
 
-<section id="contact" class="contact">
+<section class="visit-section">
   <h2>Book a Visit</h2>
-  <form id="contactForm">
+
+  <form id="contactForm" onsubmit="sendToWhatsApp(); return false;">
     <input type="text" name="name" placeholder="Full Name" required>
+
     <input type="tel" name="phone" placeholder="Phone Number" required>
+
     <textarea name="message" placeholder="Message"></textarea>
+
     <button type="submit" class="btn">Submit</button>
   </form>
 </section>
@@ -52,6 +56,6 @@
   <p>© 2026 KeyEstates | All Rights Reserved</p>
 </footer>
 
-<script src="property1.js"></script>
+<script src="propert1.js"></script>
 </body>
 </html>
