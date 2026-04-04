@@ -15,21 +15,24 @@ $(document).ready(function() {
         }
     });
 
-    // --- Basic OTP Simulation Logic ---
-    // Note: In a real environment, you will hook this up to your backend.
-    $("input.phone").on("keyup", function() {
-        var phoneValue = $(this).val();		
-        var otpWrapper = $(this).closest('form').find('.otp-wrapper');
-        
-        // Show OTP field if phone number looks complete (e.g., 10 digits)
-        if(phoneValue.length >= 10) {
-            otpWrapper.slideDown();
-            $(this).closest('form').find('input.otp').attr('required', true);
-        } else {				
-            otpWrapper.slideUp();
-            $(this).closest('form').find('input.otp').attr('required', false).val('');
-        }
-    });
+    if (fullName === "" || phone === "") {
+        alert("Name and Phone are required!");
+        return;
+      }
+      
+      if (phone.length !== 10 || isNaN(phone)) {
+        alert("Enter a valid 10-digit phone number");
+        return;
+      }
+      
+      let whatsappNumber = "919875329416"; // replace with your number
+      
+      let url = "https://wa.me/" + whatsappNumber + "?text="
+        + "Name: " + fullName + "%0a"
+        + "Phone: " + phone + "%0a"
+        + "Message: " + message;
+      
+      window.open(url, "_blank");
 
     // --- Image Gallery Popup (Magnific Popup) ---
     if($.fn.magnificPopup) {
