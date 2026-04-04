@@ -100,23 +100,25 @@
                                 <div class="card shadow-sm border-0">
                                     <div class="card-body bg-dark text-white rounded">
                                         <h4 class="title text-center mb-4">Get Expert Assistance</h4>
-                                        <form action="/process-lead.php" method="POST">
+                                        <form onsubmit="sendToWhatsApp(event)">
+    
                                             <div class="form-group mb-3">
-                                                <input class="form-control" name="name" type="text" placeholder="Name" required>
+                                                <input id="name" class="form-control" type="text" placeholder="Name" required>
                                             </div>
+                                        
                                             <div class="form-group mb-3">
-                                                <input class="form-control" name="email" type="email" placeholder="Email Address" required>
+                                                <input id="email" class="form-control" type="email" placeholder="Email Address" required>
                                             </div>
+                                        
                                             <div class="form-group mb-3">
-                                                <input class="form-control phone" name="mobile" type="tel" placeholder="Phone Number" required>
+                                                <input id="phone" class="form-control" type="tel" placeholder="Phone Number" required>
                                             </div>
-                                            <div class="otp-wrapper hide mb-3" style="display:none;">
-                                                <div class="form-group">
-                                                    <input class="form-control otp numeric" name="otp" type="text" maxlength="4" placeholder="Enter OTP" />
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary w-100 mt-2">Request Callback</button>
-                                        </form>						
+                                        
+                                            <button type="submit" class="btn btn-primary w-100 mt-2">
+                                                Request Callback
+                                            </button>
+                                        
+                                        </form>				
                                     </div>
                                 </div>
                             </div>
