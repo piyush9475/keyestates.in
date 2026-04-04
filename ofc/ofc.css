@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* FILTER BUTTONS */
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters button {
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #e0e0e0;
+}
+
+.filters .active {
+  background: #4f46e5;
+  color: white;
+}
+
+/* GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.card-img {
+  position: relative;
+  width: 45%;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BADGES */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: black;
+  color: gold;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+
+.rera {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+/* CONTENT */
+.card-content {
+  padding: 15px;
+  width: 55%;
+}
+
+.location {
+  color: gray;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+/* STATUS TEXT */
+.status-text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* STATUS BAR */
+.status-bar {
+  height: 6px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.ready { background: green; }
+.new { background: red; }
+.under { background: orange; }
