@@ -15,24 +15,36 @@ $(document).ready(function() {
         }
     });
 
-    if (fullName === "" || phone === "") {
-        alert("Name and Phone are required!");
-        return;
-      }
-      
-      if (phone.length !== 10 || isNaN(phone)) {
-        alert("Enter a valid 10-digit phone number");
-        return;
-      }
-      
-      let whatsappNumber = "919875329416"; // replace with your number
-      
-      let url = "https://wa.me/" + whatsappNumber + "?text="
-        + "Name: " + fullName + "%0a"
-        + "Phone: " + phone + "%0a"
-        + "Message: " + message;
-      
-      window.open(url, "_blank");
+    function sendToWhatsApp(event) {
+        event.preventDefault(); // STOP form from reloading page
+    
+        let fullName = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+    
+        if (fullName === "" || phone === "") {
+            alert("Name and Phone are required!");
+            return;
+        }
+    
+        if (phone.length !== 10 || isNaN(phone)) {
+            alert("Enter a valid 10-digit phone number");
+            return;
+        }
+    
+        let whatsappNumber = "919875329416"; // your number
+    
+        let message =
+            "🏠 *New Property Inquiry* %0a%0a" +
+            "👤 Name: " + fullName + "%0a" +
+            "📧 Email: " + email + "%0a" +
+            "📱 Phone: " + phone + "%0a" +
+            "📍 Project: Keyestates Horizon";
+    
+        let url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+    
+        window.open(url, "_blank");
+    }
 
     // --- Image Gallery Popup (Magnific Popup) ---
     if($.fn.magnificPopup) {
