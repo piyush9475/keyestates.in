@@ -15,26 +15,49 @@ $(document).ready(function() {
         }
     });
 
-   function sendToWhatsApp(event) {
+// ✅ GLOBAL FUNCTION (IMPORTANT)
+function sendToWhatsApp(event) {
     event.preventDefault();
-
-    alert("Button clicked!"); // 👈 DEBUG
 
     let fullName = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
     let phone = document.getElementById("phone").value.trim();
 
+    if (fullName === "" || phone === "") {
+        alert("Name and Phone are required!");
+        return;
+    }
+
+    if (phone.length !== 10 || isNaN(phone)) {
+        alert("Enter valid 10-digit phone number");
+        return;
+    }
+
     let whatsappNumber = "919875329416";
 
     let message =
-        "Name: " + fullName + "%0a" +
-        "Email: " + email + "%0a" +
-        "Phone: " + phone;
+        "🏠 New Inquiry:%0a%0a" +
+        "👤 Name: " + fullName + "%0a" +
+        "📧 Email: " + email + "%0a" +
+        "📱 Phone: " + phone + "%0a" +
+        "📍 Project: Keyestates Horizon";
 
     let url = "https://wa.me/" + whatsappNumber + "?text=" + message;
 
-    window.open(url, "_blank");
+    // ✅ safer than window.open
+    window.location.href = url;
 }
+
+
+// OPTIONAL (keep your other code)
+$(document).ready(function() {
+
+    // Only numbers input (optional)
+    $("input.numeric").on("keypress", function(e) {
+        if (e.which < 48 || e.which > 57) return false;
+    });
+
+});
     // --- Image Gallery Popup (Magnific Popup) ---
     if($.fn.magnificPopup) {
         $('.popup-gallery').magnificPopup({
