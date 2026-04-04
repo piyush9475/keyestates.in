@@ -1,81 +1,94 @@
-$(document).ready(function() {
-    
-    // --- Utility: Allow Only Numbers in Phone/OTP inputs ---
-    var specialKeys = new Array();
-    specialKeys.push(8); // Backspace
+$(document).ready(function () {
 
-    $("input.numeric").bind({
-        keydown: function(e) {
-            if (e.shiftKey === true ) {
-                if (e.which == 9) return true;
-                return false;
-            }
-            if (e.which > 57 || e.which == 32) return false;
-            return true;
-        }
-    });
+    // ===============================
+    // 📍 USER LOCATION
+    // ===============================
+    let userLocation = "Not detected";
 
-    // --- Basic OTP Simulation Logic ---
-    // Note: In a real environment, you will hook this up to your backend.
-    $("input.phone").on("keyup", function() {
-        var phoneValue = $(this).val();		
-        var otpWrapper = $(this).closest('form').find('.otp-wrapper');
-        
-        // Show OTP field if phone number looks complete (e.g., 10 digits)
-        if(phoneValue.length >= 10) {
-            otpWrapper.slideDown();
-            $(this).closest('form').find('input.otp').attr('required', true);
-        } else {				
-            otpWrapper.slideUp();
-            $(this).closest('form').find('input.otp').attr('required', false).val('');
-        }
-    });
-
-    // --- Image Gallery Popup (Magnific Popup) ---
-    if($.fn.magnificPopup) {
-        $('.popup-gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            tLoading: 'Loading image #%curr%...',
-            mainClass: 'mfp-img-mobile',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0,1] 
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                userLocation = `https://maps.google.com/?q=${position.coords.latitude},${position.coords.longitude}`;
             },
-            image: {
-                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                titleSrc: function(item) {
-                    return item.el.attr('title') + '<small>Keyestates</small>';
-                }
+            function () {
+                userLocation = "Permission denied";
             }
-        });
+        );
     }
 
-});
-document.getElementById("whatsappForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+    // ===============================
+    // 🔢 ONLY NUMBERS IN MOBILE INPUT
+    // ===============================
+    $("#mobile").on("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, '');
+    });
 
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let mobile = document.getElementById("mobile").value.trim();
+    // ===============================
+    // ⛔ SPAM PROTECTION TIMER
+    // ===============================
+    let lastSubmitTime = 0;
 
-    // ✅ Validation: At least one field required
-    if (name === "" && email === "" && mobile === "") {
-        alert("Please enter at least Name, Email, or Mobile Number");
-        return;
-    }
+    // ===============================
+    // 🚀 FORM SUBMIT → WHATSAPP
+    // ===============================
+    $("#whatsappForm").on("submit", function (e) {
+        e.preventDefault();
 
-    // ✅ WhatsApp message
-    let message = `New Callback Request%0A
+        let now = Date.now();
+
+        // ⛔ Prevent multiple fast submits
+        if (now - lastSubmitTime < 5000) {
+            alert("Please wait a few seconds before submitting again.");
+            return;
+        }
+
+        let name = $("#name").val().trim();
+        let email = $("#email").val().trim();
+        let mobile = $("#mobile").val().trim();
+
+        // ✅ At least one required
+        if (name === "" && email === "" && mobile === "") {
+            alert("Please enter Name, Email, or Mobile");
+            return;
+        }
+
+        // ✅ Mobile must be exactly 10 digits (if filled)
+        if (mobile !== "" && !/^[0-9]{10}$/.test(mobile)) {
+            alert("Mobile number must be exactly 10 digits");
+            return;
+        }
+
+        // 🤖 Hidden bot trap
+        if ($("#website").length && $("#website").val() !== "") {
+            return;
+        }
+
+        // ===============================
+        // 💬 WHATSAPP MESSAGE
+        // ===============================
+        let message = `New Callback Request%0A
 Project: Keyestates Horizon%0A
 Name: ${name}%0A
 Email: ${email}%0A
-Mobile: ${mobile}`;
+Mobile: ${mobile}%0A
+Location: ${userLocation}`;
 
-    // ✅ WhatsApp link
-    let whatsappURL = `https://wa.me/919475588248?text=${message}`;
+        let whatsappURL = `https://wa.me/919475588248?text=${message}`;
 
-    // Open WhatsApp
-    window.open(whatsappURL, "_blank");
+        lastSubmitTime = now;
+
+        window.open(whatsappURL, "_blank");
+    });
+
+    // ===============================
+    // 🖼️ IMAGE GALLERY (OPTIONAL)
+    // ===============================
+    if ($.fn.magnificPopup) {
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: { enabled: true }
+        });
+    }
+
 });
