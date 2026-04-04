@@ -15,49 +15,22 @@ $(document).ready(function() {
         }
     });
 
-// ✅ GLOBAL FUNCTION (IMPORTANT)
-function sendToWhatsApp(event) {
-    event.preventDefault();
-
-    let fullName = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let phone = document.getElementById("phone").value.trim();
-
-    if (fullName === "" || phone === "") {
-        alert("Name and Phone are required!");
-        return;
-    }
-
-    if (phone.length !== 10 || isNaN(phone)) {
-        alert("Enter valid 10-digit phone number");
-        return;
-    }
-
-    let whatsappNumber = "919875329416";
-
-    let message =
-        "🏠 New Inquiry:%0a%0a" +
-        "👤 Name: " + fullName + "%0a" +
-        "📧 Email: " + email + "%0a" +
-        "📱 Phone: " + phone + "%0a" +
-        "📍 Project: Keyestates Horizon";
-
-    let url = "https://wa.me/" + whatsappNumber + "?text=" + message;
-
-    // ✅ safer than window.open
-    window.location.href = url;
-}
-
-
-// OPTIONAL (keep your other code)
-$(document).ready(function() {
-
-    // Only numbers input (optional)
-    $("input.numeric").on("keypress", function(e) {
-        if (e.which < 48 || e.which > 57) return false;
+    // --- Basic OTP Simulation Logic ---
+    // Note: In a real environment, you will hook this up to your backend.
+    $("input.phone").on("keyup", function() {
+        var phoneValue = $(this).val();		
+        var otpWrapper = $(this).closest('form').find('.otp-wrapper');
+        
+        // Show OTP field if phone number looks complete (e.g., 10 digits)
+        if(phoneValue.length >= 10) {
+            otpWrapper.slideDown();
+            $(this).closest('form').find('input.otp').attr('required', true);
+        } else {				
+            otpWrapper.slideUp();
+            $(this).closest('form').find('input.otp').attr('required', false).val('');
+        }
     });
 
-});
     // --- Image Gallery Popup (Magnific Popup) ---
     if($.fn.magnificPopup) {
         $('.popup-gallery').magnificPopup({
@@ -79,4 +52,30 @@ $(document).ready(function() {
         });
     }
 
+});
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+
+    // ✅ Validation: At least one field required
+    if (name === "" && email === "" && mobile === "") {
+        alert("Please enter at least Name, Email, or Mobile Number");
+        return;
+    }
+
+    // ✅ WhatsApp message
+    let message = `New Callback Request%0A
+Project: Keyestates Horizon%0A
+Name: ${name}%0A
+Email: ${email}%0A
+Mobile: ${mobile}`;
+
+    // ✅ WhatsApp link
+    let whatsappURL = `https://wa.me/919475588248?text=${message}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, "_blank");
 });
