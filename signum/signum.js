@@ -132,18 +132,18 @@ class KeyEstates {
       size: "3,400 sq ft"
     },
     {
-      title: "Luxury Penthouse",
-      location: "Salt Lake",
-      price: "₹2.95 Cr",
+      title: "PS Navyom 4, 6 BHK",    
+      location: " Buroshibtala, Alipore",
+      price: "₹ 2.29 Cr - 7.40 Cr",
       img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=250&fit=crop",
       size: "3200 sqft"
     },
     {
-      title: "Prime 2BHK",
-      location: "BT Road",
-      price: "₹95 Lac",
+      title: "Swastic Shivam 3BHK",
+      location: "Swastic Shivam",
+      price: "₹ 1.45 Cr - 1.58 Cr",
       img: "https://images.unsplash.com/photo-1602940659805-770d1b81cf3e?w=400&h=250&fit=crop",
-      size: "1250 sqft"
+      size: "1,460 - 1,595 sq ft"
     }
   ];
   
