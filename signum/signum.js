@@ -118,18 +118,18 @@ class KeyEstates {
   // 🏠 PROPERTY DATA - EXPANDED
   const properties = [
     {
-      title: "DTC Downtown 3BHK",
-      location: "Rajarhat Main Road",
-      price: "₹1.45 Cr",
+      title: "Signum Niva 4BHK+4T",
+      location: "D. H. Road, Alipore",
+      price: "₹ 4.65 Cr Onwards",
       img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=250&fit=crop",
-      size: "1750 sqft"
+      size: "2,700 sq ft"
     },
     {
-      title: "DTC Downtown 4BHK", 
-      location: "New Town",
-      price: "₹1.85 Cr",
+      title: "Signum Niva 4BHK+5T", 
+      location: "D. H. Road, Alipore",
+      price: "₹ 5.52 Cr Onwards",
       img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=250&fit=crop",
-      size: "2200 sqft"
+      size: "3,400 sq ft"
     },
     {
       title: "Luxury Penthouse",
