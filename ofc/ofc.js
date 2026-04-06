@@ -1,57 +1,35 @@
 const projects = [
   {
-    name: "Altamount",
-    location: "EM Bypass, Kolkata",
-    price: "₹ 2.71 Cr - 3.60 Cr",
-    type: "office",
-    status: "new",
-    statusText: "New Launch",
-    image: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4"
+    name:"Altamount",
+    location:"EM Bypass, Kolkata",
+    price:"₹2.7Cr",
+    type:"office",
+    status:"new",
+    image:"https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800"
   },
   {
-    name: "Ambuja Ecospace",
-    location: "New Town",
-    price: "₹ 55 L Onwards",
-    type: "office",
-    status: "ready",
-    statusText: "Ready to Move",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c"
+    name:"Ambuja Ecospace",
+    location:"New Town",
+    price:"₹55L",
+    type:"office",
+    status:"ready",
+    image:"https://images.unsplash.com/photo-1497366216548-37526070297c?w=800"
   },
   {
-    name: "Amta Industrial Park",
-    location: "Howrah",
-    price: "₹ 9 Cr Onwards",
-    type: "warehouse",
-    status: "ready",
-    statusText: "Ready",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
+    name:"Amta Industrial Park",
+    location:"Howrah",
+    price:"₹9Cr",
+    type:"warehouse",
+    status:"ready",
+    image:"https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800"
   },
   {
-    name: "Arch Starwood",
-    location: "Rajarhat",
-    price: "₹ 38 L - 1.05 Cr",
-    type: "office",
-    status: "ready",
-    statusText: "Ready",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
-  },
-  {
-    name: "Astra Tower",
-    location: "New Town",
-    price: "₹ 1.45 Cr - 3 Cr",
-    type: "office",
-    status: "ready",
-    statusText: "Ready",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e"
-  },
-  {
-    name: "Elita Chambers",
-    location: "New Town",
-    price: "₹ 79 L Onwards",
-    type: "retail",
-    status: "under",
-    statusText: "Under Construction",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+    name:"Elita Chambers",
+    location:"New Town",
+    price:"₹79L",
+    type:"retail",
+    status:"under",
+    image:"https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800"
   },
   {
     name: "Emami Business Bay",
@@ -71,7 +49,7 @@ const projects = [
     statusText: "Ready",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
   },
-  {
+   {
     name: "Keventer One",
     location: "Strand Road",
     price: "₹ 2 Cr Onwards",
@@ -343,55 +321,52 @@ const projects = [
     statusText: "Under Construction",
     image: "https://www.propvestors.in/wp-content/uploads/2025/01/West-Walk-Central-Strand-Road-Project-Image-7.webp"
   },
+  {
+    name: "Arch Starwood",
+    location: "Chinar Park, Rajarhat",
+    price: "₹ 38 L - 1.05 Cr",
+    type: "office",
+    status: "under",
+    statusText: "Under Construction",
+    image: "https://www.propvestors.in/wp-content/uploads/2025/07/tashvi-central-banner.webp"
+  },
 
-
-
-
-
-
-
-  
 ];
 
-const container = document.getElementById("projectGrid");
+const grid = document.getElementById("grid");
 
-function displayProjects(data) {
-  container.innerHTML = "";
-
-  data.forEach(p => {
-    container.innerHTML += `
-      <div class="card">
-        <div class="card-img">
-          <img src="${p.image}">
-          <span class="badge">CERTIFIED</span>
-          <span class="rera">RERA ✔</span>
-        </div>
-
-        <div class="card-content">
-          <h3>${p.name}</h3>
-          <p class="location">📍 ${p.location}</p>
-          <p class="price">${p.price}</p>
-          <p>${p.type.toUpperCase()}</p>
-          <p class="status-text">${p.statusText}</p>
-          <div class="status-bar ${p.status}"></div>
-        </div>
+function display(data){
+  grid.innerHTML="";
+  data.forEach(p=>{
+    grid.innerHTML+=`
+    <div class="project-card" onclick="openProject('${p.name}')">
+      <div class="project-img">
+        <img src="${p.image}">
       </div>
-    `;
+      <div class="project-content">
+        <h3>${p.name}</h3>
+        <p>📍 ${p.location}</p>
+        <p class="price">${p.price}</p>
+        <div class="status-indicator ${p.status}"></div>
+      </div>
+    </div>`;
   });
 }
 
-function filterProjects(e, type) {
-  document.querySelectorAll(".filters button").forEach(btn => {
-    btn.classList.remove("active");
-  });
-
+function filterProjects(e,type){
+  document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
   e.target.classList.add("active");
 
-  if (type === "all") {
-    displayProjects(projects);
-  } else {
-    displayProjects(projects.filter(p => p.type === type));
-  }
+  if(type==="all") display(projects);
+  else display(projects.filter(p=>p.type===type));
 }
 
-displayProjects(projects);
+function filterByZone(zone){
+  display(projects.filter(p=>p.location.includes(zone)));
+}
+
+function openProject(name){
+  alert("Opening " + name);
+}
+
+display(projects);
