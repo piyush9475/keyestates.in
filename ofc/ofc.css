@@ -1,26 +1,55 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
   margin: 0;
-  padding: 20px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa;
 }
 
-h2 {
-  margin-bottom: 10px;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-/* FILTER BUTTONS */
+h2 { margin-bottom: 5px; }
+.subtext { color: gray; }
+
+/* ZONES */
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.zone-card {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.zone-card:hover {
+  transform: translateY(-5px);
+}
+
+.zone-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+/* FILTER */
 .filters {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .filters button {
-  border: none;
-  padding: 8px 15px;
-  margin: 5px;
+  padding: 10px 20px;
   border-radius: 20px;
+  border: none;
   cursor: pointer;
-  background: #e0e0e0;
 }
 
 .filters .active {
@@ -28,89 +57,44 @@ h2 {
   color: white;
 }
 
-/* GRID */
+/* PROJECT */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
 }
 
-/* CARD */
-.card {
+.project-card {
   display: flex;
-  background: #fff;
+  background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: 0.3s;
+  cursor: pointer;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.project-img {
+  width: 40%;
 }
 
-/* IMAGE */
-.card-img {
-  position: relative;
-  width: 45%;
-}
-
-.card-img img {
+.project-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* BADGES */
-.badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: black;
-  color: gold;
-  padding: 5px 10px;
-  font-size: 12px;
-  border-radius: 20px;
-}
-
-.rera {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: #007bff;
-  color: white;
-  padding: 5px 10px;
-  font-size: 12px;
-  border-radius: 5px;
-}
-
-/* CONTENT */
-.card-content {
+.project-content {
   padding: 15px;
-  width: 55%;
-}
-
-.location {
-  color: gray;
-  font-size: 14px;
 }
 
 .price {
+  color: #4f46e5;
   font-weight: bold;
-  margin: 8px 0;
 }
 
-/* STATUS TEXT */
-.status-text {
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-/* STATUS BAR */
-.status-bar {
-  height: 6px;
-  border-radius: 10px;
-  margin-top: 8px;
+.status-indicator {
+  height: 5px;
+  width: 50px;
+  margin-top: 10px;
 }
 
 .ready { background: green; }
