@@ -73,7 +73,7 @@ Email: ${email}%0A
 Mobile: ${mobile}%0A
 Location: ${userLocation}`;
 
-        let whatsappURL = `https://wa.me/919475588248?text=${message}`;
+        let whatsappURL = `https://wa.me/919875329416?text=${message}`;
 
         lastSubmitTime = now;
 
