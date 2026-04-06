@@ -73,7 +73,7 @@ Email: ${email}%0A
 Mobile: ${mobile}%0A
 Location: ${userLocation}`;
 
-        let whatsappURL = `https://wa.me/919475588248?text=${message}`;
+        let whatsappURL = `https://wa.me/919875329416?text=${message}`;
 
         lastSubmitTime = now;
 
@@ -90,61 +90,5 @@ Location: ${userLocation}`;
             gallery: { enabled: true }
         });
     }
-
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const section = document.querySelector(".key-metrics");
-  const bars = document.querySelectorAll(".progress-bar");
-  const counters = document.querySelectorAll(".count");
-
-  let triggered = false;
-
-  function animateBars() {
-    bars.forEach(bar => {
-      const value = bar.dataset.value;
-      bar.style.width = "0%";
-      setTimeout(() => {
-        bar.style.transition = "width 1.6s cubic-bezier(0.22, 1, 0.36, 1)";
-        bar.style.width = value + "%";
-      }, 200);
-    });
-  }
-
-  function animateCounter(counter) {
-    const target = +counter.dataset.target;
-    let current = 0;
-
-    const step = () => {
-      current += target / 50;
-      if (current < target) {
-        counter.innerText = Math.ceil(current) + "%";
-        requestAnimationFrame(step);
-      } else {
-        counter.innerText = target + "%";
-      }
-    };
-
-    step();
-  }
-
-  function runAnimation() {
-    if (triggered) return;
-    triggered = true;
-
-    animateBars();
-    counters.forEach(c => animateCounter(c));
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        runAnimation();
-      }
-    });
-  }, { threshold: 0.5 });
-
-  observer.observe(section);
 
 });
