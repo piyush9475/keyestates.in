@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Key Estate - Commercial Projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Estate - Real Estate Portal</title>
 
-<link rel="stylesheet" href="ofc.css">
+  <link rel="stylesheet" href="commercial.css">
 </head>
 
 <body>
 
-<h2>Commercial Projects</h2>
+<div class="container">
 
-<div class="filters">
-  <button class="active" onclick="filterProjects(event,'all')">All</button>
-  <button onclick="filterProjects(event,'office')">Office</button>
-  <button onclick="filterProjects(event,'retail')">Retail</button>
-  <button onclick="filterProjects(event,'warehouse')">Warehouse</button>
+  <h2>Popular Zones</h2>
+  <p class="subtext">Browse trending commercial projects</p>
+
+  <<div class="zones-grid">
+
+  <div class="zone-card" onclick="filterByZone('New Town')">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=200">
+    <div><h3>New Town</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('EM Bypass')">
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=200">
+    <div><h3>EM Bypass</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('B.T. Road')">
+    <img src="https://www.propvestors.in/wp-content/uploads/2021/05/bt-road.webp">
+    <div><h3>B.T. Road</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('Central')">
+    <img src="https://www.propvestors.in/wp-content/uploads/2021/07/central.webp">
+    <div><h3>Central</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('Howrah')">
+    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=200">
+    <div><h3>Howrah</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('Hooghly')">
+    <img src="https://www.propvestors.in/wp-content/uploads/2021/05/hooghly.webp">
+    <div><h3>Hooghly</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('Rajarhat')">
+    <img src="https://www.propvestors.in/wp-content/uploads/2021/05/rajarhat.webp">
+    <div><h3>Rajarhat</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('Joka')">
+    <img src="https://www.propvestors.in/wp-content/uploads/2021/05/joka.webp">
+    <div><h3>Joka</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('Madhyamgram')">
+    <img src="https://www.propvestors.in/wp-content/uploads/2021/05/madhyamgram.webp">
+    <div><h3>Madhyamgram</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('Sector V')">
+    <img src="https://www.propvestors.in/wp-content/uploads/2021/05/sector-v.webp">
+    <div><h3>Sector V</h3></div>
+  </div>
+
+  <div class="zone-card" onclick="filterByZone('Dhaniakhali')">
+    <img src="https://www.propvestors.in/wp-content/uploads/2025/08/dhaniakhali.webp">
+    <div><h3>Dhaniakhali</h3></div>
+  </div>
+
 </div>
 
-<div class="project-grid" id="projectGrid"></div>
 
-<script src="ofc.js"></script>
+
+  <hr>
+
+  <h2>Commercial Projects</h2>
+
+  <div class="filters">
+    <button class="active" onclick="filterProjects(event,'all')">All</button>
+    <button onclick="filterProjects(event,'office')">Office</button>
+    <button onclick="filterProjects(event,'retail')">Retail</button>
+    <button onclick="filterProjects(event,'warehouse')">Warehouse</button>
+  </div>
+
+  <div class="project-grid" id="grid"></div>
+
+</div>
+
+<script src="commercial.js"></script>
 </body>
 </html>
