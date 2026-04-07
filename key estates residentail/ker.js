@@ -1,6 +1,6 @@
 
 // ===================== ZONES =====================
-onst zones = [
+const zones = [
   {
     name: "New Town",
     projects: 38,
