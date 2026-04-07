@@ -330,3 +330,111 @@ img.img-fluid {
   border-radius: 6px;
   font-weight: 600;
 }
+.project-box {
+  border-radius: 12px;
+  background: #fff;
+}
+
+.project-box h4 {
+  font-size: 20px;
+}
+
+.project-box p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+}
+.project-box img {
+  transition: 0.3s;
+}
+
+.project-box img:hover {
+  transform: scale(1.05);
+}
+/* STICKY BAR BASE */
+.mobile-sticky-bar {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  background: #000;
+  padding: 10px;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: bottom 0.4s ease;
+}
+
+/* SHOW ANIMATION */
+.mobile-sticky-bar.show {
+  bottom: 0;
+}
+
+/* ONLY MOBILE */
+@media (min-width: 769px) {
+  .mobile-sticky-bar {
+      display: none;
+  }
+}
+
+/* ICON BUTTONS */
+.sticky-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* COLORS */
+.whatsapp {
+  background: #25D366;
+}
+
+.call {
+  background: #ffc107;
+  color: #000;
+}
+
+/* DOWNLOAD BUTTON */
+.sticky-download {
+  flex: 1;
+  margin: 0 10px;
+  background: linear-gradient(45deg, #ff0033, #ff4d4d);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* CLICK EFFECT */
+.sticky-download:active {
+  transform: scale(0.97);
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #ff0033; }
+  50% { box-shadow: 0 0 20px #ff0033; }
+  100% { box-shadow: 0 0 10px #ff0033; }
+}
+.sticky-icon i {
+  font-size: 20px;
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+.call {
+  background: #ffc107;
+  color: #000;
+}
