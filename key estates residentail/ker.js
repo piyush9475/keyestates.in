@@ -23,9 +23,13 @@ const zoneContainer = document.getElementById("zoneContainer");
 
 if (zoneContainer) {
   zones.forEach(zone => {
-    const card = document.createElement("a");
-    card.href = zone.link;
+    const card = document.createElement("div");
     card.className = "zone-card";
+
+    // 🔥 CLICK REDIRECT
+    card.onclick = () => {
+      window.location.href = zone.link;
+    };
 
     card.innerHTML = `
       <img src="${zone.img}" alt="${zone.name}">
@@ -38,6 +42,7 @@ if (zoneContainer) {
     zoneContainer.appendChild(card);
   });
 }
+
 
 // ===================== CALLBACK FORM =====================
 document.getElementById("callbackForm").addEventListener("submit", function(e) {
