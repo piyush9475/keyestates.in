@@ -17,7 +17,7 @@ const zones = [
     name: "Southern Bypass",
     projects: 23,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/southern-bypass-2-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/southernbypass.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/Southern-Bypass/Southern-Bypass.html"
   },
   {
     name: "Alipore",
