@@ -2,7 +2,7 @@
 // ===================== ZONES =====================
 // ===================== ZONES =====================
 const zones = [
-  { name: "New Town", projects: 38, img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp", link: "newtown.html" },
+  { name: "New Town", projects: 38, img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp", link: "key estates residentail/key-new-town/newtown.html" },
   { name: "EM Bypass", projects: 27, img: "https://www.propvestors.in/wp-content/uploads/2021/05/em-bypass-3-150x150.webp", link: "embypass.html" },
   { name: "Southern Bypass", projects: 23, img: "https://www.propvestors.in/wp-content/uploads/2021/05/southern-bypass-2-150x150.webp", link: "southernbypass.html" },
   { name: "Alipore", projects: 7, img: "https://www.propvestors.in/wp-content/uploads/2021/05/alipore-150x150.webp", link: "alipore.html" },
