@@ -117,8 +117,6 @@ if (zoneContainer) {
   });
 }
 
-
-
 // ===================== CALLBACK FORM =====================
 document.getElementById("callbackForm").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -131,7 +129,6 @@ document.getElementById("callbackForm").addEventListener("submit", function(e) {
 
   this.reset();
 });
-
 
 
 
