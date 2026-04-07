@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Key Estates | Zone</title>
-
- <link rel="stylesheet" href="rajarhart.css">
-<script src="rajarhart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Estates | Commercial Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
+<header>
+    <h1>Commercial Projects</h1>
+</header>
+
 <div class="container">
+    <div class="project-grid" id="projectContainer">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/400x250" alt="Altamount">
+                <div class="badge certified">CERTIFIED</div>
+                <div class="badge rera">RERA &#10003;</div>
+            </div>
+            <div class="details">
+                <div class="title-row">
+                    <h3>Altamount</h3>
+                    <p class="developer">by Arya Realty & 1 More</p>
+                </div>
+                <p class="location">Patuli, EM Bypass</p>
+                <p class="price">₹ 2.71 Cr - 3.60 Cr</p>
+                <p class="type">Office Space</p>
+                <div class="status-section">
+                    <span class="status-text">New Launch</span>
+                    <div class="progress-bar"><div class="progress red" style="width: 20%;"></div></div>
+                </div>
+            </div>
+        </div>
 
-  <!-- TOP SECTION -->
-  <div class="zone-top">
-    <div class="zone-image">
-      <img id="zoneImage">
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/400x250" alt="Ambuja Ecospace">
+                <div class="badge certified">CERTIFIED</div>
+                <div class="badge rera">RERA &#10003;</div>
+            </div>
+            <div class="details">
+                <div class="title-row">
+                    <h3>Ambuja Ecospace</h3>
+                    <p class="developer">by Ambuja Neotia</p>
+                </div>
+                <p class="location">Action Area II, New Town</p>
+                <p class="price">₹ 55 L Onwards</p>
+                <p class="type">Office Space</p>
+                <div class="status-section">
+                    <span class="status-text">Ready to Move</span>
+                    <div class="progress-bar"><div class="progress green" style="width: 100%;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="image-container">
+                <img src="https://via.placeholder.com/400x250" alt="Amta Industrial Park">
+                <div class="badge certified">CERTIFIED</div>
+                <div class="badge rera">RERA &#10003;</div>
+            </div>
+            <div class="details">
+                <div class="title-row">
+                    <h3>Amta Industrial Park I</h3>
+                    <p class="developer">by Private Property</p>
+                </div>
+                <p class="location">Ranihati-Amta Road, Howrah</p>
+                <p class="price">₹ 9 Cr Onwards</p>
+                <p class="type">Warehouse</p>
+                <div class="status-section">
+                    <span class="status-text">Ready to Move</span>
+                    <div class="progress-bar"><div class="progress green" style="width: 100%;"></div></div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="zone-content">
-      <h1 id="zoneTitle"></h1>
-      <p id="zoneDesc"></p>
-    </div>
-  </div>
-
-  <!-- MAP -->
-  <div class="map-box">
-    <iframe id="mapFrame" loading="lazy"></iframe>
-  </div>
-
 </div>
 
-<!-- LOCALITIES -->
-<div class="section-bg">
-
-  <div class="container">
-    <h2>Popular Localities in <span id="zoneName2"></span></h2>
-    <p class="subtext">Browse trending projects in popular hotspots</p>
-
-    <div class="local-grid" id="localGrid"></div>
-  </div>
-
-</div>
-
-<script src="rajarhart.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
