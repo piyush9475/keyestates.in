@@ -21,23 +21,23 @@ const zones = [
   { name: "Sector v", projects: 8, img: "https://www.propvestors.in/wp-content/uploads/2021/05/sector-v-150x150.webp" }
 ];
 
-const container = document.getElementById("zoneContainer");
+const zoneContainer = document.getElementById("zoneContainer");
 
-zones.forEach(zone => {
-  const card = document.createElement("a");   // IMPORTANT: use <a>
-  card.href = zone.link;                      // link to page
-  card.className = "zone-card";
+if (zoneContainer) {
+  zones.forEach(zone => {
+    const card = document.createElement("div");
+    card.className = "zone-card";
 
-  card.innerHTML = `
-    <img src="${zone.img}" alt="${zone.name}">
-    <div>
-      <h3>${zone.name}</h3>
-      <p>${zone.projects}</p>
-    </div>
-  `;
+    card.innerHTML = `
+      <img src="${zone.img}" alt="${zone.name}">
+      <div class="zone-info">
+        <h3>${zone.name}</h3>
+        <p>${zone.projects} Projects</p>
+      </div>
+    `;
 
-  container.appendChild(card);
-});
+    zoneContainer.appendChild(card);
+  });
 }
 
 
