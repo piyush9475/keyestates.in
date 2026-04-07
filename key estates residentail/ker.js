@@ -23,13 +23,9 @@ const zoneContainer = document.getElementById("zoneContainer");
 
 if (zoneContainer) {
   zones.forEach(zone => {
-    const card = document.createElement("div");
+    const card = document.createElement("a");
+    card.href = zone.link;
     card.className = "zone-card";
-
-    // ✅ CLICK REDIRECT (same folder)
-    card.onclick = () => {
-      window.location.href = zone.link;
-    };
 
     card.innerHTML = `
       <img src="${zone.img}" alt="${zone.name}">
