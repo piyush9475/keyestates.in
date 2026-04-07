@@ -1,3 +1,7 @@
+function toggleMenu() {
+  alert("Menu clicked");
+}
+
 const projects = [
   {
     name:"Altamount",
@@ -353,22 +357,59 @@ function display(data){
   });
 }
 
-function filterProjects(e,type){
-  document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));
-  e.target.classList.add("active");
+function showSuggestions() {
+  let inputEl = document.getElementById("searchInput");
+  let box = document.getElementById("suggestions");
 
-  if(type==="all") display(projects);
-  else display(projects.filter(p=>p.type===type));
+  if (!inputEl || !box) return; // 🔥 prevents crash
+
+  let input = inputEl.value.toLowerCase();
+
+  box.innerHTML = "";
+
+  if (!input) {
+    box.style.display = "none";
+    return;
+  }
+
+  let filtered = projects.filter(p =>
+    p.name.toLowerCase().includes(input) ||
+    p.location.toLowerCase().includes(input)
+  );
+
+  filtered.forEach(p => {
+    let div = document.createElement("div");
+
+    div.innerHTML = `${p.name} - ${p.location}`;
+
+    div.onclick = () => {
+      openProject(p.name);
+      box.style.display = "none";
+    };
+
+    box.appendChild(div);
+  });
+
+  box.style.display = "block";
+}
+// SEARCH BUTTON
+function searchProject() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+
+  let match = projects.find(p =>
+    p.name.toLowerCase().includes(input) ||
+    p.location.toLowerCase().includes(input)
+  );
+
+  if (match) {
+    openProject(match.name);
+  } else {
+    alert("Project not found");
+  }
 }
 
-function filterByZone(zone){
-  display(projects.filter(p=>p.location.includes(zone)));
-}
-
-function openProject(name){
-  alert("Opening " + name);
-}
-function openZone(zone){
-  window.location.href = `../rajarhart/index.html?zone=${zone}`;
+// MENU
+function toggleMenu() {
+  alert("Menu clicked");
 }
 display(projects);
