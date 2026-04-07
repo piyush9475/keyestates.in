@@ -5,7 +5,7 @@ const zones = [
     name: "New Town",
     projects: 38,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp",
-    link: "key new town"
+    link: "key new town/newtown.html"
   },
   {
     name: "EM Bypass",
