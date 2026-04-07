@@ -29,67 +29,67 @@ const zones = [
     name: "Maheshtala",
     projects: 38,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/maheshtala-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/maheshtala.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/Maheshtala/Maheshtala.html"
   },
   {
     name: "BT Road",
     projects: 27,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/bt-road-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/btroad.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/bt-road/bt-road.html"
   },
   {
     name: "Dum Dum",
     projects: 23,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/dumdum-1-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/dumdum.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/dum-dum/dum-dum.html"
   },
   {
     name: "Central",
     projects: 7,
     img: "https://www.propvestors.in/wp-content/uploads/2021/07/central-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/central.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/central/central.html"
   },
   {
     name: "Howrah",
     projects: 7,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/howrah-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/howrah.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/howrah/howrah.html"
   },
   {
     name: "Hooghly",
     projects: 38,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/hooghly-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/hooghly.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/hooghly/hooghly.html"
   },
   {
     name: "Tollygunge",
     projects: 27,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/tollygunge-1-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/tollygunge.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/tollyguange/tollyguange.html"
   },
   {
     name: "Rajarhat",
     projects: 23,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/rajarhat-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/rajarhat.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/rajarhat/rajarhat.html"
   },
   {
     name: "Joka",
     projects: 7,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/joka-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/joka.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/joka/joka.html"
   },
   {
     name: "Madhyamgram",
     projects: 38,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/madhyamgram-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/madhyamgram.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/Madhyamgramd/Madhyamgram.html"
   },
   {
     name: "Sector v",
     projects: 8,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/sector-v-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/sectorv.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/sectr-v/sector-v.html"
   }
 ];
 
