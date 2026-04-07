@@ -11,7 +11,7 @@ const zones = [
     name: "EM Bypass",
     projects: 27,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/em-bypass-3-150x150.webp",
-    link: "https://github.com/sidblue7-ai/keyestates.in/blob/main/key%20estates%20residentail/key-new-town/newtown.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/em-bypass/em-bypass.html"
   },
   {
     name: "Southern Bypass",
