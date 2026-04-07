@@ -61,64 +61,80 @@ $(document).ready(function () {
     // ===============================
     // 🚀 POPUP FORM SUBMIT
     // ===============================
-    $("#popupForm").on("submit", function (e) {
-        e.preventDefault();
-
-        let name = $("#popup_name").val().trim();
-        let email = $("#popup_email").val().trim();
-        let mobile = $("#popup_mobile").val().trim();
-
-        if (!name || !mobile) {
-            alert("Name and Mobile are required");
-            return;
-        }
-
-        if (!/^[0-9]{10}$/.test(mobile)) {
-            alert("Enter valid 10-digit mobile number");
-            return;
-        }
-
-        sendData(name, email, mobile, "DTC Downtown");
-
-        $("#callbackPopup").fadeOut();
-    });
-
     // ===============================
-    // 📤 COMMON FUNCTION
-    // ===============================
-    function sendData(name, email, mobile, project) {
+// 📄 ALL DOWNLOAD BUTTONS → POPUP
+// ===============================
+$("#downloadBrochureBtn, #stickyDownloadBtn").on("click", function () {
+    $("#callbackPopup").css("display", "flex");
+    $("#popupForm").attr("data-type", "brochure");
+});
 
-        let message = `New Callback Request%0A
-Project: ${project}%0A
-Name: ${name}%0A
-Email: ${email}%0A
-Mobile: ${mobile}%0A
-Location: ${userLocation}`;
+$("#downloadPaymentBtn").on("click", function () {
+    $("#callbackPopup").css("display", "flex");
+    $("#popupForm").attr("data-type", "payment");
+});
 
-        // ✅ GOOGLE SHEET
-        fetch("https://script.google.com/macros/s/AKfycbzOLmU_nxV4Rodmvc9wC0ABBs94-ZVnteLoqK-rmCxUMzv1oIG7eNZMSN18mDAUY4UG/exec", {
-            method: "POST",
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                mobile: mobile,
-                project: project,
-                location: userLocation,
-                date: new Date().toLocaleString()
-            }),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        .then(res => res.json())
-        .then(data => console.log("Saved to sheet:", data))
-        .catch(err => console.log("Sheet error:", err));
+$("#downloadFloorBtn").on("click", function () {
+    $("#callbackPopup").css("display", "flex");
+    $("#popupForm").attr("data-type", "floor");
+});
 
-        // ✅ WHATSAPP
-        let whatsappURL = `https://wa.me/919875329416?text=${message}`;
-        window.open(whatsappURL, "_blank");
+
+// ===============================
+// 🚀 SINGLE CLEAN POPUP SUBMIT
+// ===============================
+$("#popupForm").on("submit", function (e) {
+    e.preventDefault();
+
+    let name = $("#popup_name").val().trim();
+    let email = $("#popup_email").val().trim();
+    let mobile = $("#popup_mobile").val().trim();
+
+    if (!name || !mobile) {
+        alert("Name and Mobile are required");
+        return;
     }
 
+    if (!/^[0-9]{10}$/.test(mobile)) {
+        alert("Enter valid 10-digit mobile number");
+        return;
+    }
+
+    let type = $("#popupForm").attr("data-type") || "brochure";
+
+    let fileURL = "";
+    let label = "";
+
+    if (type === "payment") {
+        fileURL = "assets/brochure/payment-schedule.pdf";
+        label = "Payment Schedule";
+    } 
+    else if (type === "floor") {
+        fileURL = "assets/brochure/floor-plans.pdf";
+        label = "Floor Plans";
+    } 
+    else {
+        fileURL = "assets/brochure/dtc-downtown-brochure.pdf";
+        label = "Brochure";
+    }
+
+    let message = `New ${label} Request%0A
+Project: DTC Downtown%0A
+Name: ${name}%0A
+Email: ${email}%0A
+Mobile: ${mobile}`;
+
+    // WhatsApp
+    window.open(`https://wa.me/919875329416?text=${message}`, "_blank");
+
+    // Open file
+    setTimeout(() => {
+        window.open(fileURL, "_blank");
+    }, 800);
+
+    $("#callbackPopup").fadeOut();
+    $("#popupForm")[0].reset();
+});
     // ===============================
     // 🪟 POPUP CONTROL
     // ===============================
