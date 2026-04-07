@@ -5,13 +5,13 @@ const zones = [
     name: "New Town",
     projects: 38,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp",
-    link: "key new town"
+    link: "key estates residentail/key-new-town/newtown.html"
   },
   {
     name: "EM Bypass",
     projects: 27,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/em-bypass-3-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/embypass.html"
+    link: "https://github.com/sidblue7-ai/keyestates.in/blob/main/key%20estates%20residentail/key-new-town/newtown.html"
   },
   {
     name: "Southern Bypass",
