@@ -23,7 +23,7 @@ const zones = [
     name: "Alipore",
     projects: 7,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/alipore-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/alipore.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/Alipore/Alipore.html"
   },
   {
     name: "Maheshtala",
