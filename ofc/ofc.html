@@ -10,6 +10,51 @@
 
 <body>
 
+<header class="top-header">
+  <div class="header-container">
+
+    <!-- LEFT: LOGO -->
+    <div class="logo">
+      <img src="https://www.keyestates.in/logo2.jpeg" alt="Key Estates Logo">
+      <span>KEYESTATES</span>
+    </div>
+
+    <!-- CENTER: SEARCH -->
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="searchInput"
+        placeholder="Search properties..."
+        onkeyup="showSuggestions()"
+        onkeydown="if(event.key==='Enter'){searchProject()}"
+      >
+      <button onclick="searchProject()">Search</button>
+
+      <!-- Suggestions -->
+      <div id="suggestions" class="suggestions-box"></div>
+    </div>
+
+    <!-- RIGHT: NAV + CONTACT -->
+    <div class="header-right">
+
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Properties</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="phone">
+        📞 <a href="tel:+919875329416">+91 98753 29416</a>
+      </div>
+
+      <div class="menu" onclick="toggleMenu()">☰</div>
+    </div>
+
+  </div>
+</header>
+
+
 <div class="container">
 
   <h2>Popular Zones</h2>
@@ -47,7 +92,7 @@
     <div><h3>Hooghly</h3></div>
   </div>
 
-  <div class="zone-card" onclick="openZone('Rajarhat')">
+  <div class="zone-card" onclick="filterByZone('Rajarhat')">
     <img src="https://www.propvestors.in/wp-content/uploads/2021/05/rajarhat.webp">
     <div><h3>Rajarhat</h3></div>
   </div>
@@ -81,11 +126,11 @@
   <h2>Commercial Projects</h2>
 
   <div class="filters">
-  <button class="active" onclick="filterProjects(event,'all')">All</button>
-  <button onclick="filterProjects(event,'office')">Office</button>
-  <button onclick="filterProjects(event,'retail')">Retail</button>
-  <button onclick="filterProjects(event,'warehouse')">Warehouse</button>
-</div>
+    <button class="active" onclick="filterProjects(event,'all')">All</button>
+    <button onclick="filterProjects(event,'office')">Office</button>
+    <button onclick="filterProjects(event,'retail')">Retail</button>
+    <button onclick="filterProjects(event,'warehouse')">Warehouse</button>
+  </div>
 
   <div class="project-grid" id="grid"></div>
 
