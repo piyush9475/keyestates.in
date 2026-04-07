@@ -1,96 +1,22 @@
 
 // ===================== ZONES =====================
+// ===================== ZONES =====================
 const zones = [
-  {
-    name: "New Town",
-    projects: 38,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp",
-    link: "key estates residentail/key-new-town/newtown.html"
-  },
-  {
-    name: "EM Bypass",
-    projects: 27,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/em-bypass-3-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/embypass.html"
-  },
-  {
-    name: "Southern Bypass",
-    projects: 23,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/southern-bypass-2-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/southernbypass.html"
-  },
-  {
-    name: "Alipore",
-    projects: 7,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/alipore-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/alipore.html"
-  },
-  {
-    name: "Maheshtala",
-    projects: 38,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/maheshtala-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/maheshtala.html"
-  },
-  {
-    name: "BT Road",
-    projects: 27,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/bt-road-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/btroad.html"
-  },
-  {
-    name: "Dum Dum",
-    projects: 23,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/dumdum-1-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/dumdum.html"
-  },
-  {
-    name: "Central",
-    projects: 7,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/07/central-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/central.html"
-  },
-  {
-    name: "Howrah",
-    projects: 7,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/howrah-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/howrah.html"
-  },
-  {
-    name: "Hooghly",
-    projects: 38,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/hooghly-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/hooghly.html"
-  },
-  {
-    name: "Tollygunge",
-    projects: 27,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/tollygunge-1-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/tollygunge.html"
-  },
-  {
-    name: "Rajarhat",
-    projects: 23,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/rajarhat-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/rajarhat.html"
-  },
-  {
-    name: "Joka",
-    projects: 7,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/joka-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/joka.html"
-  },
-  {
-    name: "Madhyamgram",
-    projects: 38,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/madhyamgram-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/madhyamgram.html"
-  },
-  {
-    name: "Sector v",
-    projects: 8,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/sector-v-150x150.webp",
-    link: "https://yourusername.github.io/your-repo/sectorv.html"
-  }
+  { name: "New Town", projects: 38, img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp", link: "newtown.html" },
+  { name: "EM Bypass", projects: 27, img: "https://www.propvestors.in/wp-content/uploads/2021/05/em-bypass-3-150x150.webp", link: "embypass.html" },
+  { name: "Southern Bypass", projects: 23, img: "https://www.propvestors.in/wp-content/uploads/2021/05/southern-bypass-2-150x150.webp", link: "southernbypass.html" },
+  { name: "Alipore", projects: 7, img: "https://www.propvestors.in/wp-content/uploads/2021/05/alipore-150x150.webp", link: "alipore.html" },
+  { name: "Maheshtala", projects: 38, img: "https://www.propvestors.in/wp-content/uploads/2021/05/maheshtala-150x150.webp", link: "maheshtala.html" },
+  { name: "BT Road", projects: 27, img: "https://www.propvestors.in/wp-content/uploads/2021/05/bt-road-150x150.webp", link: "btroad.html" },
+  { name: "Dum Dum", projects: 23, img: "https://www.propvestors.in/wp-content/uploads/2021/05/dumdum-1-150x150.webp", link: "dumdum.html" },
+  { name: "Central", projects: 7, img: "https://www.propvestors.in/wp-content/uploads/2021/07/central-150x150.webp", link: "central.html" },
+  { name: "Howrah", projects: 7, img: "https://www.propvestors.in/wp-content/uploads/2021/05/howrah-150x150.webp", link: "howrah.html" },
+  { name: "Hooghly", projects: 38, img: "https://www.propvestors.in/wp-content/uploads/2021/05/hooghly-150x150.webp", link: "hooghly.html" },
+  { name: "Tollygunge", projects: 27, img: "https://www.propvestors.in/wp-content/uploads/2021/05/tollygunge-1-150x150.webp", link: "tollygunge.html" },
+  { name: "Rajarhat", projects: 23, img: "https://www.propvestors.in/wp-content/uploads/2021/05/rajarhat-150x150.webp", link: "rajarhat.html" },
+  { name: "Joka", projects: 7, img: "https://www.propvestors.in/wp-content/uploads/2021/05/joka-150x150.webp", link: "joka.html" },
+  { name: "Madhyamgram", projects: 38, img: "https://www.propvestors.in/wp-content/uploads/2021/05/madhyamgram-150x150.webp", link: "madhyamgram.html" },
+  { name: "Sector v", projects: 8, img: "https://www.propvestors.in/wp-content/uploads/2021/05/sector-v-150x150.webp", link: "sectorv.html" }
 ];
 
 const zoneContainer = document.getElementById("zoneContainer");
@@ -100,7 +26,7 @@ if (zoneContainer) {
     const card = document.createElement("div");
     card.className = "zone-card";
 
-    // 🔥 CLICK REDIRECT
+    // ✅ CLICK REDIRECT (same folder)
     card.onclick = () => {
       window.location.href = zone.link;
     };
