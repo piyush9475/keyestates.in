@@ -1,10 +1,7 @@
+
 // ===================== ZONES =====================
 const zones = [
-  { name: "New Town", 
-   projects: 38, 
-   img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp",
-    },
-  
+  { name: "New Town", projects: 38, img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp" },
   { name: "EM Bypass", projects: 27, img: "https://www.propvestors.in/wp-content/uploads/2021/05/em-bypass-3-150x150.webp" },
   { name: "Southern Bypass", projects: 23, img: "https://www.propvestors.in/wp-content/uploads/2021/05/southern-bypass-2-150x150.webp" },
   { name: "Alipore", projects: 7, img: "https://www.propvestors.in/wp-content/uploads/2021/05/alipore-150x150.webp" },
@@ -66,42 +63,42 @@ const projects = [
   {
     name: "Adi Guru Residency",
     builder: "Diganta Construction",
-    location: "New Town",
+    location: "Action Area II, New Town",
     price: "₹ 59 L Onwards",
     type: "2, 3 BHK Apartment",
     status: "New Launch",
     class: "launch",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400"
+    img: "https://www.propvestors.in/wp-content/uploads/2024/09/Adi-Guru-Residency-Action-Area-II-New-Town-Project-Image-7.webp"
   },
   {
     name: "Alcove Regency",
     builder: "Alcove Realty",
-    location: "EM Bypass",
+    location: " Topsia EM Bypass",
     price: "₹ 1.63 Cr Onwards",
     type: "3, 4 BHK Apartment",
     status: "Ready to Move",
     class: "ready",
-    img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400"
+    img: "https://www.propvestors.in/wp-content/uploads/2023/07/alove-regency-project.webp"
   },
   {
     name: "Amazonia",
     builder: "Kosmic Estate",
-    location: "Rajarhat",
+    location: "Rajarhat Main Road , Rajarhat",
     price: "₹ 57 L - 1.08 Cr",
     type: "2, 3, 4 BHK Apartment",
     status: "New Launch",
     class: "launch",
-    img: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=400"
+    img: "https://www.propvestors.in/wp-content/uploads/2022/11/kosmic-the-amazonia-project.webp"
   },
     {
-    name: "Adi Guru Residency",
-    builder: "Diganta Construction",
-    location: "New Town",
-    price: "₹ 59 L Onwards",
-    type: "2, 3 BHK Apartment",
+    name: "Ambuja Udyatt",
+    builder: "Ambuja Udyatt",
+    location: "chingrighata EM Bypass",
+    price: "₹ 4.50 cr Onwards",
+    type: "3, 4 BHK Apartment",
     status: "New Launch",
     class: "launch",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400"
+    img: "https://www.propvestors.in/wp-content/uploads/2026/01/ambuja-udyatt-banner.webp"
   },
   {
     name: "Alcove Regency",
