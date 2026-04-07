@@ -368,5 +368,7 @@ function filterByZone(zone){
 function openProject(name){
   alert("Opening " + name);
 }
-
+function openZone(zone){
+  window.location.href = `rajarhat.html?zone=${encodeURIComponent(zone)}`;
+}
 display(projects);
