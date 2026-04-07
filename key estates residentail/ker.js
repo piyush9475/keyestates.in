@@ -1,12 +1,12 @@
 
 // ===================== ZONES =====================
 const zones = [
-  {
-    name: "New Town",
-    projects: 38,
-    img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp",
-    link: "key%20estates%20residentail/key-new-town/newtown.html"
-  },
+ {
+  name: "New Town",
+  projects: 38,
+  img: "https://www.propvestors.in/wp-content/uploads/2021/05/biswa-bangla.webp",
+  link: "key-new-town/newtown.html"
+},
   {
     name: "EM Bypass",
     projects: 27,
@@ -100,11 +100,10 @@ if (zoneContainer) {
     const card = document.createElement("div");
     card.className = "zone-card";
 
-    // 🔥 CLICK REDIRECT
-    card.onclick = () => {
-      window.location.href = zone.link;
-    };
-
+card.onclick = () => {
+  console.log(zone.link);
+  window.location.href = zone.link;
+};
     card.innerHTML = `
       <img src="${zone.img}" alt="${zone.name}">
       <div class="zone-info">
