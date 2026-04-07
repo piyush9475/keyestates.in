@@ -219,13 +219,10 @@ $("#readMoreBtn").on("click", function () {
 // ===============================
 // 💰 PAYMENT BUTTON → POPUP
 // ===============================
-$("#downloadPaymentBtn").on("click", function () {
-    $("#callbackPopup").css("display", "flex");
-
-    // Mark type (important)
-    $("#popupForm").attr("data-type", "payment");
-});
-$("#popupForm").off("submit").on("submit", function (e) {
+// ===============================
+// 🚀 POPUP FORM SUBMIT
+// ===============================
+$("#popupForm").on("submit", function (e) {
     e.preventDefault();
 
     let name = $("#popup_name").val().trim();
@@ -269,7 +266,7 @@ Mobile: ${mobile}`;
 
     window.open(`https://wa.me/919875329416?text=${message}`, "_blank");
 
-    // Open file
+    // Open PDF
     setTimeout(() => {
         window.open(fileURL, "_blank");
     }, 1000);
@@ -292,18 +289,31 @@ $(window).on("scroll", function () {
 // ===============================
 // 📄 DOWNLOAD BUTTON → POPUP
 // ===============================
+// ===============================
+// 📄 ALL DOWNLOAD BUTTONS → POPUP
+// ===============================
+
+// Main brochure button
+$("#downloadBrochureBtn").on("click", function () {
+    $("#callbackPopup").css("display", "flex");
+    $("#popupForm").attr("data-type", "brochure");
+});
+
+// Sticky bar button
 $("#stickyDownloadBtn").on("click", function () {
     $("#callbackPopup").css("display", "flex");
     $("#popupForm").attr("data-type", "brochure");
 });
 
+// Payment button
+$("#downloadPaymentBtn").on("click", function () {
+    $("#callbackPopup").css("display", "flex");
+    $("#popupForm").attr("data-type", "payment");
+});
 
-// ===============================
-// ✨ AUTO HIGHLIGHT (AFTER 5 SEC)
-// ===============================
-setTimeout(() => {
-    $("#stickyDownloadBtn").css({
-        "box-shadow": "0 0 15px #ff0033",
-        "animation": "pulse 1s infinite"
-    });
-}, 5000);
+// Floor button
+$("#downloadFloorBtn").on("click", function () {
+    $("#callbackPopup").css("display", "flex");
+    $("#popupForm").attr("data-type", "floor");
+});
+
