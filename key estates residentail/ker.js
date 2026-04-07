@@ -83,13 +83,13 @@ const zones = [
     name: "Madhyamgram",
     projects: 38,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/madhyamgram-150x150.webp",
-    link: "https://www.keyestates.in/key%20estates%20residentail/Madhyamgramd/Madhyamgram.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/Madhyamgram/Madhyamgram.html"
   },
   {
     name: "Sector v",
     projects: 8,
     img: "https://www.propvestors.in/wp-content/uploads/2021/05/sector-v-150x150.webp",
-    link: "https://www.keyestates.in/key%20estates%20residentail/sectr-v/sector-v.html"
+    link: "https://www.keyestates.in/key%20estates%20residentail/sector-v/sector-v.html"
   }
 ];
 
