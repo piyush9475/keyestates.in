@@ -111,5 +111,21 @@ Location: ${userLocation}`;
             $("#mobileStickyBar").removeClass("show");
         }
     });
+    // ===============================
+// 📖 READ MORE BUTTON
+// ===============================
+$("#readMoreBtn").click(function () {
+
+    let moreContent = $("#moreContent");
+
+    if (moreContent.is(":visible")) {
+        moreContent.slideUp();
+        $(this).text("Read More");
+    } else {
+        moreContent.slideDown();
+        $(this).text("Read Less");
+    }
+
+});
 
 });
