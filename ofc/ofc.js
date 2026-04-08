@@ -383,9 +383,9 @@ function showSuggestions() {
     div.innerHTML = `${p.name} - ${p.location}`;
 
     div.onclick = () => {
-      openProject(p.name);
-      box.style.display = "none";
-    };
+  display([p]); // 🔥 show only selected project
+  box.style.display = "none";
+};
 
     box.appendChild(div);
   });
@@ -395,16 +395,20 @@ function showSuggestions() {
 // SEARCH BUTTON
 function searchProject() {
   let input = document.getElementById("searchInput").value.toLowerCase();
-
-  let match = projects.find(p =>
+  if (!input) {
+    display(projects);
+    return;
+  }
+  let filtered = projects.filter(p =>
     p.name.toLowerCase().includes(input) ||
     p.location.toLowerCase().includes(input)
   );
 
-  if (match) {
-    openProject(match.name);
+  if (filtered.length > 0) {
+    display(filtered); // 🔥 show matching projects
   } else {
-    alert("Project not found");
+    alert("No matching projects found");
+    display(projects); // reset to all
   }
 }
 
