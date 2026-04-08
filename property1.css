@@ -438,3 +438,22 @@ img.img-fluid {
   background: #ffc107;
   color: #000;
 }
+/* 🔥 MAKE 10 ACRE BIG & PREMIUM */
+.metric-card.highlight h4 {
+  font-size: 28px !important;
+  font-weight: 800;
+  line-height: 1.2;
+}
+/*.metric-card full h4 {
+  font-size: 28px !important;
+  font-weight: 800;
+  line-height: 1.2;
+}*/
+.metric-card h4 {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.metric-card {
+  padding: 12px;
+}
