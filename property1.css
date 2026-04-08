@@ -456,3 +456,24 @@ img.img-fluid {
 .metric-card {
   padding: 12px;
 }
+/* SIZE NUMBER (MAIN FOCUS) */
+.size {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* UNIT (SMALLER + SUBTLE) */
+.unit {
+  font-size: 11px;
+  color: #888;
+  margin-left: 2px;
+}
+
+/* TABLE IMPROVEMENT */
+.table td {
+  vertical-align: middle;
+}
+<h4>
+  <strong>965 - 2,010</strong>
+  <span class="unit">sq ft</span>
+</h4>
