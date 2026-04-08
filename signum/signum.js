@@ -1,169 +1,130 @@
-// 🚀 KEYESTATES - PREMIUM INTERACTIVE UPGRADE
-class KeyEstates {
-    constructor() {
-      this.init();
-    }
-  
-    init() {
-      this.preloader();
-      setTimeout(() => {
-        this.setupInteractions();
-      }, 500);
-    }
-  
-    preloader() {
-      const preloader = document.querySelector('.preloader');
-      let progress = 0;
-      
-      const interval = setInterval(() => {
-        progress += 4;
-        if (progress >= 100) {
-          clearInterval(interval);
-          document.querySelector('.preloader').classList.add('hidden');
-        }
-      }, 50);
-      
-      setTimeout(() => {
-        clearInterval(interval);
-        document.querySelector('.preloader').classList.add('hidden');
-      }, 3000);
-    }
-  
-    setupInteractions() {
-      this.mobileMenu();
-      this.smoothScroll();
-      this.animateOnScroll();
-      this.formHandler();
-      this.mouseTrail();
-      this.propertyHover();
-    }
-  
-    mobileMenu() {
-      const toggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      
-      toggle?.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-    }
-  
-    smoothScroll() {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', (e) => {
-          e.preventDefault();
-          const target = document.querySelector(anchor.getAttribute('href'));
-          target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          document.querySelector('.nav-links')?.classList.remove('active');
-        });
-      });
-    }
-  
-    animateOnScroll() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-          }
-        });
-      }, { threshold: 0.1 });
-  
-      document.querySelectorAll('.card, .hero, h2').forEach(el => {
-        el.setAttribute('data-animate', '');
-        observer.observe(el);
-      });
-    }
-  
-    formHandler() {
-      const form = document.getElementById('contactForm');
-      form?.addEventListener('submit', (e) => {
-        e.preventDefault();
-        this.showNotification('✅ Thank you! We will contact you soon.', 'success');
-        form.reset();
-      });
-    }
-  
-    mouseTrail() {
-      const trail = document.createElement('div');
-      trail.className = 'mouse-trail';
-      document.body.appendChild(trail);
-  
-      document.addEventListener('mousemove', (e) => {
-        trail.animate([
-          { transform: `translate(${e.clientX}px, ${e.clientY}px) scale(0)` },
-          { transform: `translate(${e.clientX}px, ${e.clientY}px) scale(1)` }
-        ], { duration: 300, fill: 'forwards' });
-      });
-    }
-  
-    propertyHover() {
-      document.querySelectorAll('.card').forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-      });
-    }
-  
-    showNotification(message, type) {
-      const notification = document.createElement('div');
-      notification.className = `notification ${type}`;
-      notification.textContent = message;
-      document.body.appendChild(notification);
-      
-      setTimeout(() => notification.classList.add('show'), 100);
-      setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => notification.remove(), 300);
-      }, 4000);
-    }
-  }
-  
-  // 🏠 PROPERTY DATA - EXPANDED
-  const properties = [
-    {
-      title: "Signum Niva 4BHK+4T",
-      location: "D. H. Road, Alipore",
-      price: "₹ 4.65 Cr Onwards",
-      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=250&fit=crop",
-      size: "2,700 sq ft"
-    },
-    {
-      title: "Signum Niva 4BHK+5T", 
-      location: "D. H. Road, Alipore",
-      price: "₹ 5.52 Cr Onwards",
-      img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=250&fit=crop",
-      size: "3,400 sq ft"
-    },
-    {
-      title: "PS Navyom 4, 6 BHK",    
-      location: " Buroshibtala, Alipore",
-      price: "₹ 2.29 Cr - 7.40 Cr",
-      img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=250&fit=crop",
-      size: "3200 sqft"
-    },
-    {
-      title: "Swastic Shivam 3BHK",
-      location: "Swastic Shivam",
-      price: "₹ 1.45 Cr - 1.58 Cr",
-      img: "https://images.unsplash.com/photo-1602940659805-770d1b81cf3e?w=400&h=250&fit=crop",
-      size: "1,460 - 1,595 sq ft"
-    }
-  ];
-  
-  // POPULATE PROPERTIES
-  const grid = document.getElementById('propertyGrid');
-  properties.forEach((property, index) => {
-    grid.innerHTML += `
-      <div class="card" data-tilt>
-        <img src="${property.img}" alt="${property.title}" loading="lazy">
-        <div class="card-body">
-          <h3>${property.title}</h3>
-          <p>${property.location} • ${property.size}</p>
-          <div class="price">${property.price}</div>
-          <a href="#contact" class="btn btn-small">Enquire Now</a>
-        </div>
-      </div>
-    `;
-  });
-  
-  // 🎯 START APP
-  document.addEventListener('DOMContentLoaded', () => {
-    new KeyEstates();
-  });
+$(document).ready(function () {
+
+  // ===============================
+// 📖 READ MORE BUTTON
+// ===============================
+$("#readMoreBtn").click(function (e) {
+ e.preventDefault(); // important
+
+ let moreContent = $("#moreContent");
+
+ if (moreContent.is(":visible")) {
+     moreContent.slideUp();
+     $(this).text("Read More");
+ } else {
+     moreContent.slideDown();
+     $(this).text("Read Less");
+ }
+});
+ // ===============================
+ // 📍 USER LOCATION
+ // ===============================
+ let userLocation = "Not detected";
+
+ if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(
+         function (position) {
+             userLocation = `https://maps.google.com/?q=${position.coords.latitude},${position.coords.longitude}`;
+         },
+         function () {
+             userLocation = "Permission denied";
+         }
+     );
+ }
+
+ // ===============================
+ // 📄 OPEN POPUP (ALL BUTTONS)
+ // ===============================
+ $("#downloadBrochureBtn, #stickyDownloadBtn").click(function () {
+     $("#callbackPopup").css("display", "flex");
+     $("#popupForm").attr("data-type", "brochure");
+ });
+
+ $("#downloadPaymentBtn").click(function () {
+     $("#callbackPopup").css("display", "flex");
+     $("#popupForm").attr("data-type", "payment");
+ });
+
+ $("#downloadFloorBtn").click(function () {
+     $("#callbackPopup").css("display", "flex");
+     $("#popupForm").attr("data-type", "floor");
+ });
+
+ $("#instantCallbackBtn").click(function () {
+     $("#callbackPopup").css("display", "flex");
+     $("#popupForm").attr("data-type", "callback");
+ });
+
+ // ===============================
+ // ❌ CLOSE POPUP
+ // ===============================
+ $(".close-popup").click(function () {
+     $("#callbackPopup").hide();
+ });
+
+ $(window).click(function (e) {
+     if ($(e.target).is("#callbackPopup")) {
+         $("#callbackPopup").hide();
+     }
+ });
+
+ // ===============================
+ // 🚀 POPUP FORM SUBMIT
+ // ===============================
+ $("#popupForm").submit(function (e) {
+     e.preventDefault();
+
+     let name = $("#popup_name").val().trim();
+     let email = $("#popup_email").val().trim();
+     let mobile = $("#popup_mobile").val().trim();
+
+     if (!name || !mobile) {
+         alert("Name and Mobile required");
+         return;
+     }
+
+     if (!/^[0-9]{10}$/.test(mobile)) {
+         alert("Enter valid 10 digit number");
+         return;
+     }
+
+     let type = $("#popupForm").attr("data-type") || "brochure";
+
+     let fileURL = "assets/brochure/dtc-downtown-brochure.pdf";
+
+     if (type === "payment") {
+         fileURL = "assets/brochure/payment-schedule.pdf";
+     } else if (type === "floor") {
+         fileURL = "assets/brochure/floor-plans.pdf";
+     }
+
+     let message = `New Request%0A
+Project: DTC Downtown%0A
+Name: ${name}%0A
+Email: ${email}%0A
+Mobile: ${mobile}%0A
+Location: ${userLocation}`;
+
+     // WhatsApp
+     window.open(`https://wa.me/919875329416?text=${message}`, "_blank");
+
+     // PDF open
+     setTimeout(function () {
+         window.open(fileURL, "_blank");
+     }, 800);
+
+     $("#callbackPopup").hide();
+     $("#popupForm")[0].reset();
+ });
+
+ // ===============================
+ // 📱 STICKY BAR SHOW
+ // ===============================
+ $(window).scroll(function () {
+     if ($(this).scrollTop() > 200) {
+         $("#mobileStickyBar").addClass("show");
+     } else {
+         $("#mobileStickyBar").removeClass("show");
+     }
+ });
+});
