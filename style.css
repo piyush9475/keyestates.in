@@ -491,6 +491,57 @@ text-align: left;
 transform: scale(1.05);
 }
 
+.footer-links {
+  background: #000;
+  color: #fff;
+  padding: 40px 60px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.links {
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* Links */
+.links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Hover Effect 🔥 */
+.links a:hover {
+  color: #ffcc00;
+}
+
+/* Separator */
+.links span {
+  color: #ffcc00;
+  margin: 0 6px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .zone-card {
+    flex-direction: row;
+  }
+
+
 /* Responsive */
 @media (max-width: 768px) {
 .trend-container {
