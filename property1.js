@@ -3,7 +3,8 @@ $(document).ready(function () {
      // ===============================
 // 📖 READ MORE BUTTON
 // ===============================
-$("#readMoreBtn").click(function () {
+$("#readMoreBtn").click(function (e) {
+    e.preventDefault(); // important
 
     let moreContent = $("#moreContent");
 
@@ -14,7 +15,6 @@ $("#readMoreBtn").click(function () {
         moreContent.slideDown();
         $(this).text("Read Less");
     }
-
 });
     // ===============================
     // 📍 USER LOCATION
