@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Keyestates DTC downtown: Premium Luxury Apartments</title>
     <meta name="description" content="Discover premium living with Keyestates. The DTC downtownoffers luxury apartments with top-tier amenities and unmatched connectivity."/>
@@ -15,12 +15,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="property1.css">
+    <link rel="stylesheet" href="dlf.css">
 </head>
 <body>
     <div id="main-wrapper" class="project-details-page">
         <div class="header fixed-top">
-            <div class="container">
+            <div class="container-fluid px-2">
                 <nav class="navbar h14-nav">
                     <a href="/" class="navbar-brand">
                         <img src="signum/logosmall.jpeg" alt="Keyestates Logo" class="img-fluid" />
@@ -34,7 +34,7 @@
 
         <div class="page-wrapper">
             <div class="mini-spacer bg-grey" style="padding-top: 100px;">
-                <div class="container">
+                <div class="container-fluid px-2">
                     <div class="row">
                         <div class="col-md-9">
                             <div class="project-box mb-4">
@@ -92,19 +92,49 @@
                                         </div>
                               
                                         <div class="info-grid mt-4">
-                                          <div><p>LAND AREA</p><h4>10 Acre</h4></div>
-                                          <div><p>RESIDENCE TYPOLOGY</p><h4>Apartment</h4></div>
-                                          <div><p>SUPER BUILTUP AREA</p><h4>965 - 2,010 sq ft</h4></div>
-                                          <div><p>NO. OF BLOCKS</p><h4>6</h4></div>
-                                          <div><p>FLOORS</p><h4>B+G+29</h4></div>
-                                          <div><p>NO. OF UNITS</p><h4>1313</h4></div>
-                                          <div class="full"><p>RERA ID</p><h4>WBRERA/A/NOR/2025/000774</h4></div>
-                                          <div class="mt-3 text-center">
-                                            <button class="callback-btn" id="instantCallbackBtn">
-                                              INSTANT CALLBACK
-                                            </button>
+
+                                            <div class="metric-card highlight">
+                                              <span>LAND AREA</span>
+                                              <h4>10 Acre</h4>
+                                            </div>
+                                          
+                                            <div class="metric-card">
+                                              <span>RESIDENCE TYPOLOGY</span>
+                                              <h4>Apartment</h4>
+                                            </div>
+                                          
+                                            <div class="metric-card">
+                                              <span>SUPER BUILTUP AREA</span>
+                                              <h4>965 - 2,010 sq ft</h4>
+                                            </div>
+                                          
+                                            <div class="metric-card">
+                                              <span>NO. OF BLOCKS</span>
+                                              <h4>6</h4>
+                                            </div>
+                                          
+                                            <div class="metric-card">
+                                              <span>FLOORS</span>
+                                              <h4>B+G+29</h4>
+                                            </div>
+                                          
+                                            <div class="metric-card">
+                                              <span>NO. OF UNITS</span>
+                                              <h4>1313</h4>
+                                            </div>
+                                          
+                                            <div class="metric-card full">
+                                              <span>RERA ID</span>
+                                              <h4>WBRERA/A/NOR/2025/000774</h4>
+                                            </div>
+                                          
+                                            <div class="text-center mt-3 full">
+                                              <button class="callback-btn" id="instantCallbackBtn">
+                                                INSTANT CALLBACK
+                                              </button>
+                                            </div>
+                                          
                                           </div>
-                                        </div>
                                                                                     <!-- POPUP -->
                                             <div id="callbackPopup" class="popup-overlay">
                                                 <div class="popup-box">
@@ -202,8 +232,9 @@
                                     </div>
                             
                                     <!-- BUTTON -->
-                                   <button type="button" id="readMoreBtn">Read More</button>
-                                       
+                                    <button id="readMoreBtn" class="btn btn-link p-0 mt-2">
+                                        Read More
+                                    </button>
                             
                                     <br>
                             
@@ -273,14 +304,18 @@
                                     <h6 class="fw-semibold mb-3">Master Layout Plan</h6>
                             
                                     <div class="text-center mb-4">
-                                        <img src="https://www.propvestors.in/wp-content/uploads/2026/03/dtc-downtown-mlp.webp" class="img-fluid rounded" style="max-width: 400px;">
+                                        <img src="assets/images/masterplan.jpg" class="img-fluid rounded" style="max-width: 400px;">
                                     </div>
                             
                                     <!-- FLOOR PLANS -->
                                     <h6 class="fw-semibold mb-3">Floor Plans</h6>
                             
                                     <div class="row g-3">
-
+                            
+                                        <div class="col-md-4">
+                                            <img src="https://www.propvestors.in/wp-content/uploads/2026/03/dtc-downtown-mlp.webp" class="img-fluid rounded">
+                                        </div>
+                            
                                         <div class="col-md-4">
                                             <img src="https://www.propvestors.in/wp-content/uploads/2026/03/dtc-downtown-fp-1.webp" class="img-fluid rounded">
                                         </div>
@@ -406,7 +441,7 @@
         </div>
 
         <footer class="footer bg-dark text-white py-4 mt-5">
-            <div class="container text-center">
+            <div class="container-fluid px-2 text-center">
                 <img src="signum/logosmall.jpeg" alt="Keyestates Logo" class="img-fluid" />
                 <p>Redefining real estate solutions.</p>
                 <p class="small text-muted">Copyright &copy; 2026 Keyestates Real Estate. All rights reserved.</p>
@@ -418,7 +453,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     
-    <script src="property1.js"></script>
+    <script src="dlf.js"></script>
     <div class="mobile-sticky-bar" id="mobileStickyBar">
 
         <!-- WhatsApp -->
