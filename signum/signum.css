@@ -483,3 +483,39 @@ img.img-fluid {
   border-radius: 50%;
   font-size: 12px;
 }
+/* SIZE NUMBER (MAIN FOCUS) */
+.size {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* UNIT (SMALLER + SUBTLE) */
+.unit {
+  font-size: 11px;
+  color: #888;
+  margin-left: 2px;
+}
+
+/* TABLE IMPROVEMENT */
+.table td {
+  vertical-align: middle;
+}
+@media (max-width: 576px) {
+  .size {
+    font-size: 14px;
+  }
+
+  .unit {
+    font-size: 10px;
+  }
+}
+.size {
+  font-weight: 700;
+  color: #222;
+}
+
+.unit {
+  font-size: 10px;
+  color: #aaa;
+  letter-spacing: 0.5px;
+}
