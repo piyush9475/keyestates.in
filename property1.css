@@ -473,7 +473,15 @@ img.img-fluid {
 .table td {
   vertical-align: middle;
 }
-<h4>
-  <strong>965 - 2,010</strong>
-  <span class="unit">sq ft</span>
-</h4>
+.metric-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 🔥 sq ft styling */
+.metric-card .unit {
+  font-size: 11px;
+  color: #888;
+  font-weight: 400;
+  margin-left: 3px;
+}
